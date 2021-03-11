@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+body {
+  padding-top: 80px;
+}
+.navbar {
+  background-color: rgb(238, 232, 232);
+  font-family: "Baloo 2", cursive;
+  opacity: 0.9;
+}
+.navbar #logo {
+  padding-left: 20px;
+  color: rgb(204, 148, 204);
+  text-shadow: 3px 4px 7px #cca5e2;
+  font-size: 25px;
+  font-weight: bold;
+}
+.navbar .ul-item {
+  padding-right: 8rem;
+}
+.navbar .ul-item .nav-link {
+  padding: 14px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-shadow: 2px 5px 3px rgba(0, 0, 0, 0.06);
+  font-weight: 500;
+  outline: none;
+}
+.navbar .ul-item .nav-link:hover {
+  color: rgb(189, 112, 189);
+}
+#top .fa-bars {
+  color: #fff !important;
+  font-size: 25px !important;
+}
+.navbar-toggler {
+  outline: none !important;
+}
+#nav-bar .dropdown-menu {
+  background-color: rgb(53, 50, 50);
+}
+#top {
+  font-family: "Baloo 2", cursive;
+}
+#top .intro-text .h-1 {
+  color: rgb(189, 183, 183);
+  letter-spacing: 1px;
+  text-shadow: 3px 4px 7px #f0edf1;
+}
+#top .intro-text .h-2 {
+  color: rgb(207, 136, 207);
+  letter-spacing: 1px;
+  text-shadow: 3px 4px 7px #d3b8e2;
+}
+#top .intro-text #bold-span {
+  color: rgb(221, 82, 18);
+  font-weight: 700;
+}
+#top .intro-text p {
+  font-size: 14;
+  margin-top: 10px;
+  letter-spacing: 1.5px;
+  color: rgb(173, 163, 163);
+}
+
+#top .intro-img {
+  margin-top: 20px;
+}
+#top .intro-text .intro-btn {
+  background-color: rgb(202, 117, 202);
+  margin-top: 8px;
+  color: rgb(255, 253, 253);
+  -webkit-box-shadow: 4px 8px 15px 1px #b984d8;
+  box-shadow: 4px 8px 15px 1px #b374d8;
+}
+#top .intro-text .intro-btn:hover {
+  transform: scale(1.1);
+  -webkit-box-shadow: 4px 8px 15px 1px #b984d8;
+  box-shadow: 4px 8px 15px 1px #b374d8;
+}
+#about-us {
+  margin-top: 80px;
+  font-family: "Poiret One", cursive;
+  font-weight: 900;
+}
+#about-us .about-heading {
+  color: #b984d8;
+  letter-spacing: 1px;
+  text-shadow: 3px 4px 7px #d3b8e2;
+  font-family: "Baloo 2", cursive;
+  border-left: 3px solid #b374d8;
+  width: 190px;
+  margin: auto;
+}
+#about-us .about-p {
+  letter-spacing: 1.2px;
+  font-size: 22px;
+  margin-top: 8px;
+  color: rgb(173, 163, 163);
+}
+#about-us #about-head {
+  color: rgb(173, 163, 163);
+  font-size: 40px;
+  font-weight: 600;
+  text-shadow: 3px 4px 7px #f0edf1;
+}
+.about-text p {
+  font-size: 20px;
+  margin-top: 10px;
+  text-align: justify;
+  font-family: "Baloo 2", cursive;
+  color: rgb(146, 141, 141);
+}
+.about-text .bold-about {
+  font-weight:bolder;
+  color: rgb(221, 82, 18);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#about-us .about-btn {
+  background-color: rgb(202, 117, 202);
+  margin-top: 8px;
+  color: rgb(255, 253, 253);
+  -webkit-box-shadow: 4px 8px 15px 1px #b984d8;
+  box-shadow: 4px 8px 15px 1px #b374d8;
+}
+#about-us .about-btn:hover{
+  transform: scale(1.1);
+  -webkit-box-shadow: 4px 8px 15px 1px #b984d8;
+  box-shadow: 4px 8px 15px 1px #b374d8;
+}
+#services {
+  margin-top: 80px;
+}
+#services .services-heading {
+  color: #b984d8;
+  letter-spacing: 1px;
+  text-shadow: 3px 4px 7px #d3b8e2;
+  font-family: "Baloo 2", cursive;
+  border-right: 3px solid #b374d8;
+  width: 254px;
+  margin: auto;
+}
+#services .services-p {
+  letter-spacing: 1.2px;
+  font-size: 22px;
+  font-weight: 900;
+  font-family: "Poiret One", cursive;
+  margin-top: 8px;
+  color: rgb(173, 163, 163);
+}
+#services #web{
+  width: auto;
+  height: 250px;
+}
+#services .Service-Row{
+  margin-top: 15%;
+}
+#services .card{
+  cursor: pointer;
+  background-color:rgb(241, 237, 235);
+  font-family: "Baloo 2", cursive;
+  
+}
+#services .card img{
+  transform: translateY(-50px);
+  height: 200px;
+  border-radius: 15px;
+  z-index: 1;
+}
+#services .card-body{
+  visibility: hidden;
+  transform: translateY(-150px);
+  height: 0px;
+}
+#services .card:hover .card-body{
+visibility: visible;
+transform: translateY(-50px);
+transition: 0.5s;
+height: auto;
+opacity: 0.9;
+
+}
+#services .card .card-btn{
+  background-color: rgb(202, 117, 202);
+  margin-top: 8px;
+  color: rgb(255, 253, 253);
+  -webkit-box-shadow: 4px 8px 15px 1px #b984d8;
+  box-shadow: 4px 8px 15px 1px #b374d8;
+}
+#services .card .card-btn:hover{
+  transform: scale(1.1);
+  -webkit-box-shadow: 4px 8px 15px 1px #b984d8;
+  box-shadow: 4px 8px 15px 1px #b374d8;
+}
+#team{
+  margin-top: 10px;
+}
+#team h1{
+  color: #b984d8;
+  letter-spacing: 1px;
+  text-shadow: 3px 4px 7px #d3b8e2;
+  font-family: "Baloo 2", cursive;
+  border-right: 3px solid #b374d8;
+  width: 190px;
+  margin: auto;
+}
+#team .t-p{
+  margin-bottom: 20px;
+  letter-spacing: 1.2px;
+  font-size: 22px;
+  font-weight: 900;
+  font-family: "Poiret One", cursive;
+  margin-top: 8px;
+  color: rgb(173, 163, 163);
+}
+#team .card h3{
+  color: #b374d8;
+}
+#team .card h5{
+  font-family: "Poiret One", cursive;
+  font-weight: bolder;
+}
+#team .card-body img{
+  margin-top: -50px ;
+  border-radius: 2px solid green;
+}
+#team i{
+  font-size: 26px;
+  color: #555;
+}
+#team p{
+  font-weight: 500;
+ 
+}
+#team .card{
+  border-radius: 0;
+  font-family: "Baloo 2", cursive;
+  margin-top: 50px;
+  box-shadow: 5px 5px 15px #555;
+  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+}
+#team .card:hover{
+  transform: scale(1.03);
+  background: #cca5e2;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 5px 5px 10px #b374d8;
+  
+}
+#team .card i{
+  color: #b374d8;
+  
+}
+#team .card:hover i,#team .card:hover h3{
+  color: #fff;
+}
+
+/* contact section  */
+#contact{
+  margin-top: 60px;
+  font-family: "Baloo 2", cursive;
+  color: #b374d8;
+
+}
+#contact .contact-heading{
+  color: #b984d8;
+  letter-spacing: 1px;
+  text-shadow: 3px 4px 7px #d3b8e2;
+  font-family: "Baloo 2", cursive;
+  border-left: 3px solid #b374d8;
+  width: 220px;
+  margin: auto;
+}
+#contact .contact-p{
+  margin-bottom: 20px;
+  letter-spacing: 1.2px;
+  font-size: 22px;
+  font-weight: 900;
+  font-family: "Poiret One", cursive;
+  margin-top: 8px;
+  color: rgb(173, 163, 163);
+}
+#contact input,#contact textarea{
+  border: 2px inset #fff;
+  outline: none !important;
+}
+
+#contact .contact-btn{
+  background-color: rgb(202, 117, 202);
+  margin-top: 8px;
+  color: rgb(255, 253, 253);
+  -webkit-box-shadow: 4px 8px 15px 1px #b984d8;
+  box-shadow: 4px 8px 15px 1px #b374d8;
+}
+#contact .contact-btn:hover{
+  transform: scale(1.1);
+  -webkit-box-shadow: 4px 8px 15px 1px #b984d8;
+  box-shadow: 4px 8px 15px 1px #b374d8;
+}
+/* footer section  */
+#footer {
+  margin-top: 60px;
+  padding: 20px;
+  opacity: 0.9;
+  background: rgb(206, 197, 197);
+}
+#footer .copyright{
+color: #555;
+margin: auto;
+}
+#footer #bottom-link a{
+color: #555;
+}

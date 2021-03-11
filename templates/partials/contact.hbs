@@ -1,0 +1,33 @@
+<section id="contact">
+    <div class="container">
+        <h1 class="text-center contact-heading">Contact Us</h1>
+        <p class="text-center contact-p">Grow Your Bussniss with us</p>
+        <div class="row">
+            <div class="col-md-6 mx-auto ">
+                <form action="/contact" method="POST">
+                    <div class="form-group">
+                        <label for="Name">Name</label>
+                        <input type="text" class="form-control" name="name" id="Name" placeholder="Enter name">
+                    </div>
+                    <div class="form-group">
+                        <label for="Email">Email address</label>
+                        <input type="email" class="form-control" name="email" id="Email" aria-describedby="emailHelp"
+                            placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            else.</small>
+                        <div class="form-group">
+                            <label for="Phone">Phone</label>
+                            <input type="number" class="form-control" name="phone" id="Phone" aria-describedby="emailHelp"
+                                placeholder="Enter Phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="textarea">Message</label>
+                            <textarea class="form-control" name="message" id="textarea" rows="3" placeholder="Write Something to us.."></textarea>
+                        </div>
+                        <button type="submit" class="btn contact-btn">Submit</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</section>
