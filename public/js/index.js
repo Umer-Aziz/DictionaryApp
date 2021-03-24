@@ -3,6 +3,7 @@ let word_id = document.getElementById("word_id");
 let def_id = document.getElementById("def_id");
 let def_strong = document.querySelector(".def_strong");
 let fas = document.querySelector(".fass");
+let text = document.querySelector(".text");
 let search_btn = document.getElementById("search_btn");
 let not_found = document.querySelector(".not_found");
 let loading = document.querySelector(".loading");
@@ -79,20 +80,27 @@ async function getData(word) {
 
   //get audio
   const sound = data[0].hwi.prs[0].sound.audio;
-  if (sound) {
-    renderSound(sound);
+  const symbol = data[0].hwi.prs[0].ipa;
+  if (sound,symbol) {
+    renderSound(sound,symbol);
   }
 
   console.log(data);
 }
-function renderSound(sound) {
+function renderSound(sound,symbol) {
   // https://media.merriam-webster.com/soundc11
   let subfolder = sound.charAt(0);
+  
   let soundSrc = `https://media.merriam-webster.com/soundc11/${subfolder}/${sound}.wav?key=${ApiKey}`;
+ 
   let aud=document.createElement("audio");
+  
   aud.src=soundSrc;
+  
   aud.controls=true;
+  
 
   fas.appendChild(aud);
+text.innerText=symbol;
 
 }
