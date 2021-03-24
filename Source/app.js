@@ -2,10 +2,8 @@ const express=require("express");
 const app=express();
 const path=require("path");
 const hbs=require("hbs");
-require('./db/conn');
-const User=require("./models/UserMessage");
-const { urlencoded } = require("express");
-const port=process.env.PORT || 3300;
+
+const port=process.env.PORT || 3000;
 
 // setting path
 const spath=path.join(__dirname,"../public");
@@ -22,16 +20,13 @@ hbs.registerPartials(PartialsPath)
 app.get('/',(req,res)=>{
     res.render("index");
 })
-app.post("/contact",async(req,res)=>{
- try {
-     
-     const UserData=new User(req.body);
-     await UserData.save();
-     res.status(201).render("index");
- } catch (error) {
-     res.status(500).send(error.message);
- }
+app.get('/about',(req,res)=>{
+    res.render("about");
 })
+app.get('/contact',(req,res)=>{
+    res.render("contact");
+})
+
 app.listen(port,(req,res)=>{
 console.log(`the Server running at port ${port}`)
 })
