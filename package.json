@@ -6,7 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon Source/app.js -e js,hbs",
+<<<<<<< HEAD
     "start":"nodemon Source/app.js"
+=======
+    "start":"node Source/app.js"
+>>>>>>> a8dd36a72ce7e9a26cda539fb6ca55937708116c
   },
   "keywords": [],
   "author": "khan",
