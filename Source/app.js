@@ -1,7 +1,9 @@
 const express=require("express");
 const app=express();
+const translate=require("translate");
 const path=require("path");
 const hbs=require("hbs");
+
 
 const port=process.env.PORT || 3000;
 
@@ -30,3 +32,4 @@ app.get('/contact',(req,res)=>{
 app.listen(port,(req,res)=>{
 console.log(`the Server running at port ${port}`)
 })
+

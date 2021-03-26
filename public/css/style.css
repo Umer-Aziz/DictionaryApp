@@ -175,19 +175,18 @@ display: none;
   align-items: center;
 }
 
-.input .def_class span{
+.input .def_class #def_id{
   font-size: 18px;
 }
-.input .def_class strong{
-  font-size: 20px;
+.input .def_class i{
+  font-size: 22px;
 }
 .input .icon_box{
 font-size: 28px;
 display: flex;
 font-weight: bold;
 }
-.input .icon_box i{
-  padding: 10px 14px;
+.input .icon_box .fass{
     margin: 0 20px;
     outline: none !important;
     cursor: pointer;
@@ -195,7 +194,7 @@ font-weight: bold;
     border-radius: 50%;
 }
 .input .not_found{
-  width: 50vw;
+  width: 70vw;
 }
 .input .suggested {
   background-color: #419FFB;
@@ -206,4 +205,19 @@ font-weight: bold;
   margin-top: 5px;
   cursor: pointer;
   display: inline-block;
+}
+.input .trans{
+  display: flex;
+}
+.input .trans .text_trans,#text_trans{
+  font-size: 22px;
+  display: none;
+}
+.input  .text{
+  font-size:20px;
+  
+}
+.input #pron_li {
+  font-size: 22px;
+  display: none;
 }

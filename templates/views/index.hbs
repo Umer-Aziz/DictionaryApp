@@ -16,7 +16,7 @@
 </head>
 
 <body>
-
+{{!-- section navbar  --}}
   {{>navbar}}
 
   {{!-- section home --}}
@@ -35,26 +35,10 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
 <script src="js/smooth.js"></script>
-<script src="js/index.js"></script>
+<script src="js/bundle.js"></script>
 
-  <script>
-      $(document).ready(function () {
-        $(".navbar-nav a").click(function (event) {
-          $(".navbar-collapse").collapse("hide");
-        });
-      });
-     let form=document.querySelector(".contact-btn");
-     form.addEventListener("click",()=>{
-       alert("Thank you")
-     })
   
-    </script>
-      <script>
-      const but=document.getElementById('Button');
-
-      // but.addEventListener('click',()=>alert("Thanks to Subscribe us"));
-      var scroll = new SmoothScroll('a[href*="#"]');
-    </script>
+     
 </body>
 
 </html>

@@ -1,7 +1,12 @@
+const translate=require("translate")
 let search_input = document.getElementById("search_input");
 let word_id = document.getElementById("word_id");
+let pron_li = document.getElementById("pron_li");
+let text_trans = document.getElementById("text_trans");
+let text_spanish = document.querySelector(".text_trans");
 let def_id = document.getElementById("def_id");
 let def_strong = document.querySelector(".def_strong");
+
 let fas = document.querySelector(".fass");
 let text = document.querySelector(".text");
 let search_btn = document.getElementById("search_btn");
@@ -16,9 +21,10 @@ e.preventDefault();
  
   fas.innerHTML="";
   not_found.innerText="";
-  def_id.innerText="";
-  def_strong.innerText="";
   word_id.innerText="";
+  def_id.innerText="";
+  def_strong.innerText=""
+  
 
   //get input data;
   let word = search_input.value;
@@ -26,16 +32,22 @@ e.preventDefault();
     alert("word is required");
     return;
   }
-  getData(word);
+  getData(word,"es");
   word_id.innerText = word;
 
   //call an api
 });
 
-async function getData(word) {
+async function getData(word,translateTo) {
     loading.style.display="block";
     word_id.style.display="block";
     head.style.display="none";
+    text_spanish.style.display="block";
+    text_trans.style.display="block";
+    pron_li.style.display="block";
+    translate.engine="libre";
+    const translated_str= await translate(word, translateTo);
+    text_trans.innerText=translated_str;
   //Ajax call
 
   const Api_response = await fetch(
@@ -43,20 +55,35 @@ async function getData(word) {
   );
 
   const data = await Api_response.json();
+  console.log(data);
   //if emplty result
   if (!data.length) {
       word_id.style.display="none";
     loading.style.display="none";
     head.style.display="none";
+    text_spanish.style.display="none";   
+    text_trans.style.display="none";
+    pron_li.style.display="none";
+     def_strong.style.display="none";
+
+
+
     not_found.innerText = "No Result Found 😕";
     return;
   }
 
   //if result is suggested
   if (typeof data[0] === "string") {
+    pron_li.style.display="none";
     loading.style.display="none";
     head.style.display="none";
     word_id.style.display="block";
+    text_spanish.style.display="none"
+    text_trans.style.display="none";
+    text.style.display="none";
+    def_strong.style.display="none";
+
+
     let heading = document.createElement("h3");
     heading.innerText = "Did You mean ?";
     not_found.appendChild(heading);
@@ -74,6 +101,9 @@ async function getData(word) {
   loading.style.display="none";
   head.style.display="none";
   word_id.style.display="block";
+  text_spanish.style.display="block";
+  text_trans.style.display="block";
+  pron_li.style.display="block";
   let Defination = data[0].shortdef[0];
   def_id.innerText = Defination;
   def_strong.innerText = "Defination:";
@@ -85,7 +115,7 @@ async function getData(word) {
     renderSound(sound,symbol);
   }
 
-  console.log(data);
+  
 }
 function renderSound(sound,symbol) {
   // https://media.merriam-webster.com/soundc11
@@ -104,3 +134,4 @@ function renderSound(sound,symbol) {
 text.innerText=symbol;
 
 }
+
