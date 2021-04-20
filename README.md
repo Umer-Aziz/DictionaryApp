@@ -1,4 +1,4 @@
-Dictionary spp in javaScript
+# Dictionary app in javaScript
 
 ScreenShot:
 
